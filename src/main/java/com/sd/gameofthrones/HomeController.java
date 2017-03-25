@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.gameofthrones.controllers.Player;
 import com.gameofthrones.controllers.House;
 import com.gameofthrones.controllers.WesterosDAO;
-
+///// test
 //@SessionAttributes("obj")
 @Controller
 public class HomeController {
