@@ -7,8 +7,32 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Edit ${player.firstName}</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+       <link rel="stylesheet"  href="Stylesheet.css">
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 <body>
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Welcome to our Game of Thrones App</a>
+
+    <ul class="nav navbar-nav">
+      <li><a href="welcome.do">Home</a></li>
+      <li><a href="goNewPlayerForm.do">Add a new Character</a></li>
+	 <li><a href="goNewHouseForm.do">Add a new House</a></li>
+
+    </ul>
+</div>
+</nav>
+
 
 <h1>Editing ${player.firstName}</h1>
 	<form action="editPlayer.do" method="POST">
@@ -18,6 +42,5 @@
 		Status: <input type="text" name="headOfHouse" value="${player.status}"/><br> 
 		<button type="submit" value="Edit">Save changes to ${player.firstName}</button>
 	</form>
-	<a href="welcome.do">Home</a>
 </body>
 </html>

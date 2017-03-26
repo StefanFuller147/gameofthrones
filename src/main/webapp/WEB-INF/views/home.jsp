@@ -14,13 +14,14 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-       <link rel="stylesheet"  href="Stylesheet.css">
+<link rel="stylesheet"  href="Stylesheet.css" />
 
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 <body>
 <nav class="navbar navbar-default">
+
     <div class="navbar-header">
       <a class="navbar-brand" href="#">Welcome to our Game of Thrones App</a>
 
