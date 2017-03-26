@@ -10,7 +10,7 @@ import java.util.List;
 
 public class WesterosDAOImpl implements WesterosDAO {
 
-	private static String url = "jdbc:mysql://localhost:3306/gotdb";
+	private static String url = "jdbc:mysql://localhost:3306/GoTDB";
 	private String user = "root";
 	private String pass = "root";
 
