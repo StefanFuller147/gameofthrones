@@ -1,14 +1,47 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<title>Home</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Westeros</title>
 </head>
 <body>
-<h1>
-	Hello world!  
-</h1>
 
-<P>  The time on the server is ${serverTime}. </P>
+	<c:choose>
+		<c:when test="${ houseNotFound}">
+			<h3>
+				<em>Sorry, this house has been destroyed by Ser Pounce.</em>
+			</h3>
+		</c:when>
+	</c:choose>
+	<c:choose>
+		<c:when test="${playerNotFound}">
+			<h3>
+				<em>Sorry, this character has been flayed by Ramsay Bolton.</em>
+			</h3>
+		</c:when>
+	</c:choose>
+
+
+
+	<form action="gethousebyname.do" method="GET">
+		House: <input type="text" name="house" /> <input type="submit"
+			value="Search" />
+	</form>
+	<form action="getplayerbyname.do" method="GET">
+		Character: <input type="text" name="player" /> <input type="submit"
+			value="Search" />
+	</form>
+	<a href="goNewHouseForm.do">Add a New House</a>
+	<br>
+	<a href="goNewPlayerForm.do">Add a New Character</a>
+	<br>
+
+	<%-- 	<c:forEach var="house" items="${houses}">
+		<h2><a href="retrieve.do?abr=${house.id}">${house.houseName}</a></h2><br>
+	</c:forEach> --%>
 </body>
 </html>

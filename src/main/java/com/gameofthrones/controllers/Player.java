@@ -1,6 +1,12 @@
 package com.gameofthrones.controllers;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Player {
+	
+	private int id;
 	private String firstName;
 	private String lastName;
 	private String nickName;
@@ -63,4 +69,11 @@ public class Player {
 	public Player() {
 
 	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	
 }
