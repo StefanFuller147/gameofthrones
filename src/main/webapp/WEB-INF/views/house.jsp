@@ -7,22 +7,43 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>${house.houseName}</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+       <link rel="stylesheet"  href="Stylesheet.css">
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
+
 <body>
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Welcome to our Game of Thrones App</a>
+
+    <ul class="nav navbar-nav">
+      <li><a href="welcome.do">Home</a></li>
+      <li><a href="goNewPlayerForm.do">Add a new Character</a></li>
+	 <li><a href="goNewHouseForm.do">Add a new House</a></li>
+	  <li><a href="goEditHouseForm.do?id=${house.id}">Edit this House</a></li>
+	  <li><a href="goDeleteHouse.do?id=${house.id}">Delete this House</a></li>
+    </ul>
+</div>
+</nav>
+
 	<c:choose>
 		<c:when test="${!empty house}">
 			<h1>${house.houseName}</h1>
 			<h3>${house.location}</h3>
 			<h3>${house.headOfHouse}</h3>
-			<a href="goEditHouseForm.do?id=${house.id}">Edit
-				${house.houseName}</a>
-			<a href="goDeleteHouse.do?id=${house.id}">Delete
-				${house.houseName}</a>
-			<a href="welcome.do">Home</a>
+
 		</c:when>
 		<c:otherwise>
 			<h1>House not found!</h1>
-			<a href="welcome.do">Return Home</a>
 		</c:otherwise>
 	</c:choose>
 </body>

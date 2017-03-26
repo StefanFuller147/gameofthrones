@@ -34,7 +34,6 @@
     </ul>
 </div>
 </nav>
-</head>
 	<c:choose>
 		<c:when test="${player != null}">
 			Player id: ${player.id }
